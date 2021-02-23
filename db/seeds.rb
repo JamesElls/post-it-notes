@@ -8,13 +8,13 @@
 
 require "faker"
 
-Page.destroy_all
+Note.destroy_all
 
 10.times do
-  Page.create(
+  Note.create(
     title: Faker::Hacker.abbreviation,
-    description: Faker::Lorem.body,
+    description: Faker::Lorem.words,
   )
 end
 
-puts "Seeded you have #{Page.all.size} pages
+puts "Seeded you have #{Note.all.size} notes"
